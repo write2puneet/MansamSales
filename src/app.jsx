@@ -704,7 +704,7 @@ function GameScreen({ customer, playerName, onEnd, onCancel }) {
       console.error(err);
       setErrorMsg("Speech recognition failed to start.");
     }
-  }, []);
+  }, [/* your dependencies */]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const stopListening = () => {
     try { recognitionRef.current?.stop(); } catch {}
